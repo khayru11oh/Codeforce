@@ -6,7 +6,8 @@ import (
 
 func main() {
 	var matrix [5][5]int
-	var indexOf int = 4 // a middle element's indexes summ(i + j)
+	var indexOfi int = 2
+	var indexOfj int = 2
 	var result int
 	for i:=0; i<5; i++ {
 		for j:=0; j<5; j++ {
@@ -14,7 +15,7 @@ func main() {
 			fmt.Scan(&temp)
 			matrix[i][j] = temp
 			if matrix[i][j] == 1 {
-				result = int(math.Abs(float64(i + j - indexOf)))
+				result = int(math.Abs(float64(j - indexOfj)) + math.Abs(float64(i - indexOfi)))
 			}
 		}
 	}
