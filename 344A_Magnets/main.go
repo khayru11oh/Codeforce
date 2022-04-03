@@ -1,24 +1,21 @@
 package main
-
 import (
 	"fmt"
+	"bufio"
+	"os"
 )
 
-func main () {
-	var n, helper, summ int = 0, 0, 0
-	fmt.Scan(&n)
+func main() {
 	
-	for i:=0; i<n; i++ {
-		var magnet int
-		fmt.Scan(&magnet)
-		if i==0 {
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	var summ int = 0
+	var strhelper string = ""
+	for scanner.Scan() {
+		str := scanner.Text()
+		if strhelper != str {
+			strhelper = str
 			summ++
-			helper = magnet
-		} else{
-			if helper != magnet {
-				helper = magnet
-				summ++
-			}
 		}
 	}
 	fmt.Println(summ)
