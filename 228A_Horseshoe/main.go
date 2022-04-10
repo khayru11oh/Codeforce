@@ -13,14 +13,7 @@ func inputFunc(sl map[int]int) {
 
 func findFunc(sl map[int]int, summ *int) {
 	var ss int = len(sl)
-	*summ = 4 - ss	
-	// for i:=0; i<3; i++ {
-	// 	for j:=i+1; j<4; j++ {
-	// 		if (*sl)[i] == (*sl)[j] {
-	// 			*summ++
-	// 		}
-	// 	}
-	// }
+	*summ = 4 - ss
 }
 
 func main() {
